@@ -1,0 +1,142 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7f8fa, #dfe4ea);
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .calculator {
+    width: 100%; /* Full width on smaller devices */
+    max-width: 400px; /* Slightly larger max width for desktops */
+    background: rgb(53, 56, 59);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 0 20px; /* Ensures some padding on the sides for small screens */
+  }
+  
+  .control-dots {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f57;
+  }
+  
+  .dot.yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .dot.green {
+    background-color: #28c840;
+  }
+  
+  .display {
+    background-color: #222324;
+    color: #dfe6e9;
+    font-size: 2.5em; /* Keep font-size readable */
+    text-align: right;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    min-height: 80px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 20px;
+    font-size: 1.5em;
+    background: #46211a;
+    color: #dfe6e9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:hover {
+    background: #000000;
+  }
+  
+  .operator {
+    background: #336b87;
+    color: white;
+  }
+  
+  .operator:hover {
+    background: #000000;
+  }
+  
+  .equal {
+    background: #763626;
+    color: white;
+    grid-column: span 2;
+  }
+  
+  .equal:hover {
+    background: #000000;
+  }
+  
+  .clear {
+    background: #763626;
+    color: white;
+  }
+  
+  .clear:hover {
+    background: #763626;
+  }
+  
+  @media (max-width: 600px) {
+    .calculator {
+      width: 90%;
+      max-width: 340px;
+    }
+  
+    .display {
+      font-size: 6vw;
+      padding: 15px; 
+    }
+  
+    .btn {
+      font-size: 5vw; 
+      padding: 15px; 
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .calculator {
+      max-width: 400px; 
+    }
+  
+    .display {
+      font-size: 2.5em;
+    }
+  
+    .btn {
+      padding: 20px;
+      font-size: 1.8em;
+    }
+  }
+  
